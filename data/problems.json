@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "topics": ["Array", "Hash Table"],
+    "url": "https://leetcode.com/problems/two-sum/"
+  },
+  {
+    "id": 2,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "topics": ["Stack", "String"],
+    "url": "https://leetcode.com/problems/valid-parentheses/"
+  },
+  {
+    "id": 3,
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "Easy",
+    "topics": ["Linked List", "Recursion"],
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/"
+  },
+  {
+    "id": 4,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "topics": ["Array", "Dynamic Programming"],
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  },
+  {
+    "id": 5,
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "topics": ["Array", "Hash Table", "Sorting"],
+    "url": "https://leetcode.com/problems/contains-duplicate/"
+  },
+  {
+    "id": 6,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "topics": ["Array", "Binary Search"],
+    "url": "https://leetcode.com/problems/binary-search/"
+  },
+  {
+    "id": 7,
+    "title": "Invert Binary Tree",
+    "difficulty": "Easy",
+    "topics": ["Tree", "DFS", "BFS"],
+    "url": "https://leetcode.com/problems/invert-binary-tree/"
+  },
+  {
+    "id": 8,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "topics": ["Hash Table", "String", "Sorting"],
+    "url": "https://leetcode.com/problems/valid-anagram/"
+  },
+  {
+    "id": 9,
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "topics": ["Tree", "DFS", "BFS"],
+    "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+  },
+  {
+    "id": 10,
+    "title": "Palindrome Number",
+    "difficulty": "Easy",
+    "topics": ["Math"],
+    "url": "https://leetcode.com/problems/palindrome-number/"
+  }
+]
