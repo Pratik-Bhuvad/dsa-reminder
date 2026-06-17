@@ -8,7 +8,7 @@ from ..storage.history_repository import (
     get_history_by_date,
 )
 from ..selectors.problem_selector import select_todays_problem
-from ..outputs.terminal_output import log_problem_to_terminal
+from ..delivery.terminal_output import log_problem_to_terminal
 
 
 def get_daily_problems(file_path):
