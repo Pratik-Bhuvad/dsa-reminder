@@ -9,9 +9,13 @@ from ..storage.history_repository import (
 )
 from ..selectors.problem_selector import select_todays_problem
 from ..delivery.terminal_output import log_problem_to_terminal
+from ..delivery.file_delivery import write_problem_to_file, format_problem_for_file
+from ..delivery.email_delivery import send_email
+
+from ..config import GMAIL_RECEIVER_EMAIL as receiver
 
 
-def get_daily_problems(file_path):
+def get_daily_problems(file_path, output_file_path):
     """
     Retrieves daily problems from a specified JSON file.
 
@@ -36,8 +40,17 @@ def get_daily_problems(file_path):
             ),
             None,
         )
+        
+        problem_body = format_problem_for_file(selected_problem)
 
         log_problem_to_terminal(selected_problem)
+        write_problem_to_file(problem_body, output_file_path)
+        send_email(
+            recipient=receiver,
+            subject="Today's Daily Problem",
+            body=problem_body
+        )
+        
         return None
 
     # Filter out problems that have already been attempted
@@ -56,7 +69,15 @@ def get_daily_problems(file_path):
 
     # Record the selected problem in the history with the current date
     add_history(selected_problem["id"], datetime.now())
+    
+    problem_body = format_problem_for_file(selected_problem)
 
     log_problem_to_terminal(selected_problem)
+    write_problem_to_file(problem_body, output_file_path)
+    send_email(
+        recipient=receiver,
+        subject="Today's Daily Problem",
+        body=problem_body
+    )
 
     return None

@@ -1,6 +1,5 @@
 import sqlite3 as sqlite
-
-db_file = 'data/dsa_reminder.db'
+from ..config import DB_FILE as db_file
 
 def create_connection():
     """ create a database connection to the SQLite database specified by db_file
