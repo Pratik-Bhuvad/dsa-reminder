@@ -1,18 +1,19 @@
-## DSA REMINDER v0.0.0
+## DSA REMINDER v0.2.0
 
-A lightweight Python-based daily DSA problem reminder system designed to help maintain consistent problem-solving practice.
+A lightweight Python-based Automated daily DSA problem recommendation system with persistence, scheduling, and email delivery. Designed to help maintain consistent problem-solving practice.
 
 ## PURPOSE
 
 Maintaining consistency in DSA practice is often harder than solving the problems themselves. This project aims to remove the decision-making overhead by automatically selecting a problem from a predefined pool and presenting it to the user.
 
-Version 0 focuses on the core workflow:
+Version 0.2 focuses on the core workflow:
 
 - Load problems from a local JSON file
 - Track previously shown problems
 - Prevent repetition until the entire problem pool has been exhausted
 - Reset the cycle once all problems have been shown
-- Display the selected problem in the terminal
+- Display the selected problem in the terminal and send via email
+- Automate the whole process using windows scheduler
 
 ## FEATURES
 
@@ -24,6 +25,9 @@ Version 0 focuses on the core workflow:
 
 - **RESET Functionality**: Once all problems have been shown, the system resets to allow for a new cycle.
 
+- **Automation**: Execute the script at the set time daily
+
+- **Delivery**: Show the problem to user in terminal as well as via email
 
 ## ARCHITECTURE
 
@@ -35,7 +39,7 @@ PROBLEM SOURCE (JSON) --> DAILY PROBLEM SERVICE --> STORAGE (SQLite) --> DELIVER
 
 1. **Clone the Repository**: Clone this repository to your local machine.
 ```
-git clone <repository-url>
+git clone 'https://github.com/Pratik-Bhuvad/dsa-reminder'
 ```
 
 2. **Install Dependencies**: Ensure you have Python installed. Install any required packages using pip.
@@ -66,7 +70,7 @@ Link: https://leetcode.com/problems/valid-parentheses/
 
 ## CURRENT STATUS
 
-DSA Reminder v0 is the foundation release.
+DSA Reminder v0.2 is the foundation release.
 
 Implemented:
 
@@ -74,12 +78,11 @@ Implemented:
 - Sequential problem selection
 - SQLite persistence
 - History reset mechanism
-- Terminal delivery
+- Terminal and email delivery
+- Automation using windows scheduler
 
 Planned for future versions:
 
-- Automated daily execution
-- Email delivery
 - Alternative selection strategies
 - Dynamic problem sources
 - Topic rotation
